@@ -1,0 +1,42 @@
+help
+show dbs
+use demo
+show dbs
+db.dog.insert({name:Rusty", bred:"Mutt"})
+db.dog.insert({name:"Rusty", bred:"Mutt"})
+show collections
+db.dogs.find()
+db.dog.find
+db.dog.find()
+db.dog.insert({name:"Lucky", bred:"Dalmation"})
+db.dog.find()
+db.dog.find({name:"Rusty"})
+db.dog.insert({name:"Lulu", bred:"Poodle"})
+db.dog.update({name:"Lulu"}, {breed:"Labradoodle"})
+db.dog.find()
+db.dog.update({name:"Rusty"}, {$set: {name:"Tater", isCute:true}})
+db.dog.find()
+db.dog.remove({breed:"Labradoodle"})
+db.dog.find()
+db.dog.remove({breed:"Mutt"})
+db.dog.remove({bred:"Mutt"})
+show dbs
+show dbs
+show collections
+use cat_app
+show collections
+use yelp_camp
+show collections
+showdbs
+show dbs
+use yelp_camp
+show collections
+db.campgrounds.find()
+db.campgrounds.remove(name:"Sebec Lake")
+db.campgrounds.remove(name: "Sebec Lake")
+db.campgrounds.delete(name: "Sebec Lake")
+show dbs
+use yelp_camp
+show collections
+db.campgrounds.remove({name: "Sebec Lake"})
+db.campgrounds.remove({name: "Lillian Lake Loop"})
