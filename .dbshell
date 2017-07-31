@@ -40,3 +40,36 @@ use yelp_camp
 show collections
 db.campgrounds.remove({name: "Sebec Lake"})
 db.campgrounds.remove({name: "Lillian Lake Loop"})
+show dbs
+use yelp_camp
+show collections
+db.campgrounds.find()
+db.campgrounds.drop()
+use yelp_camp
+db.yelp_camp.remove({name: "Yosemite Valley"})
+db.yelp_camp.find()
+db.campgrounds.find()
+db.campgrounds.drop()
+show dbs
+use restful_blog_app
+show collections
+db.blogs.find()
+show dbs
+show dbs
+use restful_blog_app
+show collections
+mongo
+use restful_blog_app
+show collections
+db.blogs.find()
+use restful_blog_app
+;
+db.blogs.find()
+db.blogs.drop
+db.blogs.find()
+db.blogs.drop()
+db.blogs.find()
+use restful_blog_app
+db.blogs.insertOne({title: "test post", image: "http://images.summitpost.org/medium/307015.jpg", body: "this is a test blog post", created: Date.now()})
+db.blogs.insert({title: "test post", image: "http://images.summitpost.org/medium/307015.jpg", body: "this is a test blog post", created: Date.now()})
+db.blogs.find()
