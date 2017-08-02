@@ -73,3 +73,15 @@ use restful_blog_app
 db.blogs.insertOne({title: "test post", image: "http://images.summitpost.org/medium/307015.jpg", body: "this is a test blog post", created: Date.now()})
 db.blogs.insert({title: "test post", image: "http://images.summitpost.org/medium/307015.jpg", body: "this is a test blog post", created: Date.now()})
 db.blogs.find()
+show dbs
+use restful_blog_app
+show collections
+blogs.find90
+blogs.find()
+db.blogs.find()
+db.blogs.remove({title: "test post"})
+db.blogs.find()
+use restful_blog_app
+db.blogs.find()
+db.blogs.remove({_id : ObjectId("597fdc5ffdcfa111d4e77a74")})
+db.blogs.find()

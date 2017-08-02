@@ -25,10 +25,10 @@ var Blog = mongoose.model("Blog", blogSchema);
 
 //restful routes
 app.get("/", function(req, res) {
-    res.redirect("/blogs")
+    res.redirect("/blogs");
 });
 
-
+//INDEX ROUTE
 app.get("/blogs", function(req, res){
     Blog.find({}, function(err, blogs){
         if(err){
@@ -39,11 +39,38 @@ app.get("/blogs", function(req, res){
     });
 });
 
-// title
-// image 
-// body
-// created
+//NEW ROUTE
+app.get("/blogs/new", function(req, res) {
+    res.render("new");
+});
+
+//CREATE ROUTE
+
+app.post("/blogs", function(req, res){
+   //create blog
+   Blog.create(req.body.blog, function(err, newBlog){
+       if(err){
+           res.render("new");
+       }else {
+           //then, redirect to the index
+           res.redirect("/blogs");
+       }
+   });
+});
+
+
+//SHOW ROUTE
+
+app.get("/blogs/:id", function(req, res) {
+    Blog.findById(req.params.id, function(err, foundBlog){
+        if (err){
+            res.redirect("index");
+        } else {
+            res.render("show", {blog: foundBlog});
+        }
+    });
+});
 
 app.listen(process.env.PORT, process.env.IP, function() {
-    console.log("sever is running")
+    console.log("sever is running");
 });
